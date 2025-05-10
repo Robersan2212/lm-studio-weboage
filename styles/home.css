@@ -49,8 +49,8 @@ ul {
 /* Logo styles */
 .logo a {
     display: flex;
-    align-items: left;
-    margin-left: 535px;
+    align-items: center;
+    margin-left: 30px;
 }
 
 .logo h1 {
@@ -61,41 +61,8 @@ ul {
     color: #333;
 }
 
-/* Navigation menu */
-.nav-menu ul {
-    display: flex;
-    gap: 30px;
-}
 
-.nav-menu a {
-    font-size: 14px;
-    font-weight: 500;
-    letter-spacing: 1px;
-    padding: 10px 0;
-    position: relative;
-    transition: color 0.3s;
-}
-
-.nav-menu a:hover {
-    color: #b88e65;
-}
-
-.nav-menu a::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: #b88e65;
-    transition: width 0.3s;
-}
-
-.nav-menu a:hover::after {
-    width: 100%;
-}
-
-/* Header right section (social + account) */
+/* Header right section social */
 .header-right {
     display: flex;
     align-items: center;
@@ -122,9 +89,79 @@ ul {
 }
 
 .social-icons a:hover {
-    background-color: #b88e65;
+    background-color: #333;
     color: #fff;
 }
+/*Location button, top left corner*/
+.header-left{
+    display: flex;
+    align-items: left;
+    margin-left: -350px;
+}
+
+.button {
+    --width: 100px;
+    --height: 35px;
+    --tooltip-height: 35px;
+    --tooltip-width: 90px;
+    --gap-between-tooltip-to-button: 18px;
+    --button-color: #333;
+    --tooltip-color: #fff;
+    width: var(--width);
+    height: var(--height);
+    background: var(--button-color);
+    position: relative;
+    text-align: center;
+    border-radius: 0.45em;
+    font-family: "Arial";
+    transition: background 0.3s;
+  }
+  
+  .button::before {
+    position: absolute;
+    content: attr(data-tooltip);
+    width: var(--tooltip-width);
+    height: var(--tooltip-height);
+    background-color: #555;
+    font-size: 0.9rem;
+    color: #fff;
+    border-radius: .25em;
+    line-height: var(--tooltip-height);
+    bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) + 10px);
+    left: calc(50% - var(--tooltip-width) / 2);
+  }
+  
+  
+  
+  .text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .button-wrapper,.text,.icon {
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    color: #fff;
+  }
+  
+  .text {
+    top: 0
+  }
+  
+  .text,.icon {
+    transition: top 0.5s;
+  }
+  
+  
+  .button:hover {
+    background: #5a4a42;
+  }
+  
+  
 
 /* Account links */
 .account-links {
@@ -146,23 +183,6 @@ ul {
     font-size: 18px;
 }
 
-/* Mobile menu toggle */
-.mobile-toggle {
-    display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 30px;
-    height: 21px;
-    cursor: pointer;
-}
-
-.mobile-toggle span {
-    display: block;
-    height: 3px;
-    width: 100%;
-    background-color: #333;
-    transition: all 0.3s;
-}
 
 /* Header scroll effect */
 .header.scrolled {
@@ -170,7 +190,7 @@ ul {
     height: 70px;
 }
 
-/* Demo content */
+
 /* Hero section */
 .hero {
     display: flex;
@@ -241,12 +261,83 @@ ul {
     object-position: center;
 }
 
+/* Conocenos section styling  */
 
+.conc{
+   width: 100%;
+   height: 100%;
+   background: #e8e8e8;
+}
+
+/* About Section / Get to Know Us */
+.about-section {
+    padding: 100px 0;
+    background-color: #f9f5f2;
+    position: fixed;
+}
+
+.about-wrapper {
+    display: flex
+    align-items: left;
+    gap: 60px;
+}
+
+/* Left card with message */
+.about-card {
+    flex: 1;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.section-tag {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #b88e65;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    font-weight: 600;
+    color: #3d3d3d;
+    margin-bottom: 25px;
+}
+
+.section-text {
+    color: #666;
+    margin-bottom: 20px;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.text-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #b88e65;
+    font-weight: 500;
+    margin-top: 15px;
+    transition: all 0.3s;
+}
+
+.text-link:hover {
+    gap: 15px;
+    color: #5a4a42;
+}
+
+
+
+  
 /* Responsive styles */
 @media (max-width: 992px) {
-    .nav-menu ul {
-        gap: 20px;
-    }
     
     .social-icons {
         gap: 10px;
@@ -255,11 +346,19 @@ ul {
     .logo a {
         display: flex;
         align-items: left;
-        margin-left: 410px;
+        margin-left: 45px;
     }
 
     .header-right {
         margin-right: 0;
+    }
+
+    .header-left{
+        margin: 0;
+    }
+
+    .subtitle {
+        margin-top: 90px;
     }
 }
 
@@ -268,54 +367,6 @@ ul {
         height: 70px;
     }
     
-    .mobile-toggle {
-        display: flex;
-        z-index: 1001;
-    }
-    
-    .mobile-toggle.active span:nth-child(1) {
-        transform: translateY(9px) rotate(45deg);
-    }
-    
-    .mobile-toggle.active span:nth-child(2) {
-        opacity: 0;
-    }
-    
-    .mobile-toggle.active span:nth-child(3) {
-        transform: translateY(-9px) rotate(-45deg);
-    }
-    
-    .nav-menu {
-        position: fixed;
-        top: 0;
-        right: -100%;
-        width: 80%;
-        max-width: 300px;
-        height: 100vh;
-        background-color: #fff;
-        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
-        padding: 100px 30px 30px;
-        transition: right 0.3s ease;
-        z-index: 1000;
-    }
-    
-    .nav-menu.active {
-        right: 0;
-    }
-    
-    .nav-menu ul {
-        flex-direction: column;
-        gap: 20px;
-    }
-    
-    .nav-menu a {
-        display: block;
-        font-size: 18px;
-    }
-    
-    .social-icons {
-        display: none;
-    }
 
 }
 
@@ -326,11 +377,10 @@ ul {
     
     .account-links {
         gap: 10px;
+
+        margin-left: -200px;
     }
     
-    .account-links a:not(.cart-icon) {
-        display: none;
-    }
     
     .hero h2 {
         font-size: 48px;

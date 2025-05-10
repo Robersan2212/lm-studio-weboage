@@ -13,6 +13,15 @@
 <body>
     <header class="header">
         <div class="container">
+
+            <div class="header-left">
+                <div class="button">
+                    <div class="button-wrapper">
+                      <div class="text">Ubicacion</div>
+                      </div>
+                    </div>
+            </div>
+
             <!-- Logo -->
             <div class="logo">
                 <a>
@@ -28,6 +37,7 @@
                     <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
                 </div>
             </div>
+
         </div>
     </header>
 
@@ -44,18 +54,37 @@
             </div>
             <div class="hero-right">
                 <div class="hero-image">
-                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/tymo-beauty-Rfk_fVd-RwE-unsplash.jpg-dJki8YSggP7iTDXnB5NfddAw0c7Ko4.jpeg" alt="Woman with beautiful wavy hair holding a styling tool">
+                    <img src="/styles/assets/hero_2.webp" alt="Woman with beautiful wavy hair holding a hair dryer">
                 </div>
             </div>
         </section>
+
+        <section class="conc">
+                <div class="container">
+                    <div class="about-wrapper">
+                        <!-- Left Card with Message -->
+                        <div class="about-card">
+                            <span class="section-tag">About Us</span>
+                            <h2 class="section-title">Get to Know Us</h2>
+                            <p class="section-text">
+                                At Amber Lee, we believe that beauty is an expression of individuality. Our team of passionate stylists and makeup artists are dedicated to helping you discover your unique style and enhance your natural beauty.
+                            </p>
+                            <p class="section-text">
+                                With over 10 years of experience in the beauty industry, we've perfected our craft to deliver exceptional results that make you feel confident and radiant.
+                            </p>
+                            <a href="#about" class="text-link">
+                                <span>Learn more about our story</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                </div>
+
+                <div></div>
+        </section>
+
     </main>
 
     <script>
-        // Mobile menu toggle functionality
-        document.querySelector('.mobile-toggle').addEventListener('click', function() {
-            document.querySelector('.nav-menu').classList.toggle('active');
-            this.classList.toggle('active');
-        });
 
         // Header scroll effect
         window.addEventListener('scroll', function() {
