@@ -4,7 +4,7 @@
 The software I developed is a comprehensive, responsive website for "LM Studio," a beuty salon in Tuxttla Gutierrez, Chiapas, Mexico.
 The core of this site is built with HTML5, CSS3, and vanilla JavaScript, with no reliance on frameworks like jQuery or React. This approach shows               fundamental JavaScript programming concepts while maintaining excellent performance and browser compatibility.
 
-[Software Demo Video](http://youtube.link.goes.here)
+[LM studio Website code explanation](https://youtu.be/iTVP9bXrpHM)
 
 # Development Environment
 * Vscode
@@ -28,3 +28,4 @@ Here are some of the things I inted to improve in this website
 
 - SEO
 - Optimal images
+- Better Responsivenes
