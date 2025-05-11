@@ -16,7 +16,6 @@ The core of this site is built with HTML5, CSS3, and vanilla JavaScript, with no
 
 # Useful Websites
 
-{Make a list of websites that you found helpful in this project}
 
 - [UI Verse](https://uiverse.io/)
 - [W3 Schools](https://www.w3schools.com/)
