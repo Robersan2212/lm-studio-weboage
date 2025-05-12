@@ -207,7 +207,7 @@
                       <ul class="contact-info">
                           <li>
                               <i class="fas fa-phone"></i>
-                              <span>+52 961 XXX XX</span>
+                              <span>+52 961 110 8314</span>
                           </li>
                           <li>
                               <i class="fas fa-envelope"></i>
@@ -454,7 +454,7 @@
                   return;
               }
               
-              // Group services by their direct category
+              // Group services by their category
               const servicesByCategory = {};
               services.forEach(service => {
                   if (!servicesByCategory[service.categoryId]) {
@@ -493,7 +493,6 @@
                       </li>
                       `).join('')}
                   </ul>
-                  <a href="#book-${categoryId}" class="service-button">Reservar</a>
                   `;
                   
                   servicesContainer.appendChild(categoryCard);
