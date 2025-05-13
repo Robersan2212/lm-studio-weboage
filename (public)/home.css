@@ -9,7 +9,7 @@
     font-family: 'Poppins', sans-serif;
     color: #333;
     line-height: 1.6;
-    background: #3d3d3d;
+    background: #fff;
   }
   
   .container {
@@ -200,6 +200,7 @@
   
   .hero-left {
     width: 50%;
+    height: 100%;
     background-color: #e9b8a8; /* Peach/salmon color from the reference */
     display: flex;
     align-items: center;
@@ -948,19 +949,6 @@
       font-size: 16px;
   }
   
-  .footer-newsletter {
-      flex: 1;
-      min-width: 250px;
-  }
-  
-  .footer-newsletter h3 {
-      font-size: 18px;
-      font-weight: 600;
-      margin-bottom: 25px;
-      position: relative;
-      padding-bottom: 10px;
-  }
-  
   .footer-newsletter h3::after {
       content: '';
       position: absolute;
@@ -1266,5 +1254,11 @@
     
     .ubicacion-title {
         font-size: 20px;
+    }
+  }
+
+  @media (max-width: 460px) {
+    .services-container{
+      margin: auto;
     }
   }
